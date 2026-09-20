@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0f19">
+  <title>VANZ RENTAL FF</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,sans-serif;background:#080b12;color:#fff;line-height:1.5}
+    .wrap{max-width:720px;margin:auto;padding:18px}
+    header{background:linear-gradient(135deg,#141b2d,#0b0f19);border:1px solid #26304a;border-radius:22px;padding:28px 20px;text-align:center;margin-bottom:18px;box-shadow:0 10px 30px #0006}
+    .logo{width:76px;height:76px;border-radius:20px;background:linear-gradient(135deg,#ffb000,#ff4d00);display:grid;place-items:center;margin:0 auto 12px;font-size:30px;font-weight:900}
+    h1{font-size:28px}.sub{color:#aeb8ce;margin-top:5px}
+    .notice{margin-top:18px;padding:12px;border-radius:12px;background:#101827;color:#dbe4f8;font-size:14px}
+    .section{font-size:20px;font-weight:800;margin:22px 0 12px}
+    .card{background:#101520;border:1px solid #242d42;border-radius:18px;padding:17px;margin-bottom:12px}
+    .row{display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .name{font-weight:800;font-size:17px}.badge{background:#153e2b;color:#6ff0a4;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:700}
+    .price{font-size:20px;font-weight:900;color:#ffbf35;margin:8px 0}
+    .small{font-size:13px;color:#9da8bd}
+    button,.btn{display:block;width:100%;border:0;border-radius:12px;padding:13px;text-align:center;text-decoration:none;font-weight:800;font-size:15px;cursor:pointer;margin-top:10px}
+    .wa{background:#25d366;color:#07150c}.tg{background:#229ed9;color:#fff}
+    .google{background:#fff;color:#111827;border:1px solid #d7dce5}
+    .login-box{background:#101520;border:1px solid #242d42;border-radius:18px;padding:17px;margin-top:12px}
+    .user-info{display:none;margin-top:10px;padding:10px;border-radius:10px;background:#172033;color:#dbe4f8;font-size:13px}
+
+    .info{background:#121a2a;border:1px solid #263451;border-radius:16px;padding:16px}
+    ul{padding-left:20px;color:#c8d0df}li{margin:6px 0}
+    footer{text-align:center;color:#737e93;font-size:12px;padding:25px 0 10px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="logo">FF</div>
+      <h1>VANZ RENTAL FF</h1>
+      <p class="sub">Rental akun Free Fire • Cepat • Praktis</p>
+      <div class="notice">⚠️ Gunakan akun sesuai ketentuan dan jangan mengubah data akun tanpa izin pemilik.</div>
+    </header>
+
+    <div class="section">🎮 Paket Rental</div>
+
+    <div class="card">
+      <div class="row"><div class="name">⏱️ Rental 1 Jam</div><span class="badge">TERSEDIA</span></div>
+      <div class="price">Rp5.000</div>
+      <div class="small">Cocok untuk pemakaian singkat.</div>
+      <a class="btn wa" href="https://wa.me/6285925542215?text=Halo%20kak,%20saya%20mau%20order%20rental%20akun%20Free%20Fire%201%20jam." target="_blank">💬 Order via WhatsApp</a>
+    </div>
+
+    <div class="card">
+      <div class="row"><div class="name">📅 Rental 1 Hari</div><span class="badge">TERSEDIA</span></div>
+      <div class="price">Rp50.000</div>
+      <div class="small">Durasi maksimal 24 jam sejak akun diberikan.</div>
+      <a class="btn wa" href="https://wa.me/6285925542215?text=Halo%20kak,%20saya%20mau%20order%20rental%20akun%20Free%20Fire%201%20hari." target="_blank">💬 Order via WhatsApp</a>
+    </div>
+
+    <div class="section">📜 Rules Rental</div>
+    <div class="info">
+      <ul>
+        <li>Dilarang mengganti email, password, atau data keamanan akun.</li>
+        <li>Dilarang menggunakan cheat, script, bug abuse, atau aplikasi ilegal.</li>
+        <li>Dilarang melakukan transaksi/perubahan yang merugikan pemilik akun.</li>
+        <li>Setelah masa rental selesai, akun wajib dikembalikan.</li>
+        <li>Simpan bukti pembayaran dan chat transaksi.</li>
+      </ul>
+    </div>
+
+
+    <div class="section">🔐 Login Admin</div>
+    <div class="login-box">
+      <p class="small">Login Google dapat dipakai untuk identitas admin. Untuk login Google yang benar-benar aktif, isi Google Client ID dan siapkan OAuth/hosting backend.</p>
+      <button class="btn google" onclick="googleLogin()">🇬 Login dengan Google</button>
+      <div id="userInfo" class="user-info"></div>
+    </div>
+
+    <div class="section">📞 Hubungi Admin</div>
+    <div class="card">
+      <p class="small">Klik tombol di bawah untuk melakukan pemesanan.</p>
+      <a class="btn wa" href="https://wa.me/6285925542215?text=Halo%20kak,%20saya%20mau%20order%20rental%20akun%20Free%20Fire." target="_blank">🟢 WhatsApp Admin</a>
+      <a class="btn tg" href="https://t.me/" target="_blank">🔵 Telegram</a>
+    </div>
+
+    <footer>© 2026 VANZ RENTAL FF • Website Rental Akun</footer>
+  </main>
+
+<script>
+function googleLogin() {
+  alert("Login Google belum aktif. Login Google memerlukan Google OAuth Client ID dan konfigurasi OAuth. HTTPS tidak diaktifkan oleh login Google; HTTPS diperoleh dari hosting seperti GitHub Pages.");
+}
+</script>
+
+</body>
+</html>
